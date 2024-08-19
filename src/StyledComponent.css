@@ -1,0 +1,28 @@
+.styled-component {
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.styled-component.styled {
+  background-color: var(--bg-color, #ffde59);
+  color: var(--text-color, #000);
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .styled-component {
+    font-size: 14px;
+  }
+}
