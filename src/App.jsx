@@ -1,22 +1,20 @@
 import React from "react";
-import Greeting from "./Greeting";
-import UserProfileCard from "./UserProfileCard";
-import StyledComponent from "./StyledComponent";
+import UserProfile from "./UserProfile";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Greeting name="John" />
-      <UserProfileCard
-        name="Jane Doe"
-        age={28}
-        bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
-        location="New York"
-        profilePicture="https://via.placeholder.com/100"
+    <div>
+      <UserProfile
+        user={{
+          name: "John Doe",
+          age: 30,
+          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.",
+          location: "New York",
+          profilePicture: "https://picsum.photos/200/300",
+        }}
       />
-      <StyledComponent isStyled={true} />
     </div>
   );
-}
+};
 
 export default App;
